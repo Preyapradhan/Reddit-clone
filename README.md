@@ -1,70 +1,122 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reddit Clone 
 
-## Available Scripts
+A static page implementation of a Reddit-inspired platform, designed to closely match provided designs and dynamically fetch popular posts using the Reddit API. This project combines static design elements with dynamic API integrations for the "Popular" section.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [API Integration](#api-integration)
+- [Additional Considerations](#additional-considerations)
+- [Front-End of the Reddit-clone](#front-end-of-the-reddit-clone)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
 
-### `npm test`
+This project replicates a Reddit-like page, focusing on creating a pixel-perfect static design with dynamic integration for the "Popular" section using the Reddit Open API. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+While most sections are static, the **Popular** section fetches real-time data for posts from Reddit. You can sort posts dynamically based on options like **hot**, **new**, or **controversial**.
 
-### `npm run build`
+### Design Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Build a static page that matches the provided design specifications as closely as possible.
+- Ensure a dynamic and functional **Popular** section powered by the Reddit API.
+- Optionally implement a **Search** feature and pagination for enhanced functionality.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- **Dynamic Popular Section**:
+  - Fetches posts using the Reddit API: `https://www.reddit.com/r/{subreddit}/{sort}/.json?limit={limit}`.
+  - Sort options: **hot**, **new**, **controversial**, etc.
+  - Customizable subreddit and post limit.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Optional Search Functionality**:
+  - Implements search using: `https://www.reddit.com/search.json?q={query}`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Static Sections**:
+  - Favorites, Reddit Feeds, and other non-dynamic sections are hardcoded.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Pixel-Perfect Design**:
+  - Matches the provided design specifications as closely as possible.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Frontend Framework**: React 
+- **Styling**: CSS or any preferred framework like Tailwind CSS
+- **API Integration**: Reddit Open API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+- [Node.js](https://nodejs.org/)
+- A code editor like [VS Code](https://code.visualstudio.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Preyapradhan/Reddit-clone.git
+   cd Reddit-clone
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Advanced Configuration
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Access the application at `http://localhost:3000`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## API Integration
 
-### `npm run build` fails to minify
+- **Fetch Posts**:
+  - Use the API: `https://www.reddit.com/r/{subreddit}/{sort}/.json?limit={limit}`.
+  - Replace `{subreddit}` with the desired subreddit name (e.g., `technology`).
+  - Replace `{sort}` with sorting options like **hot**, **new**, or **controversial**.
+  - Replace `{limit}` with the number of posts to fetch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Search Posts**:
+  - Use the API: `https://www.reddit.com/search.json?q={query}`.
+  - Replace `{query}` with the desired search term.
+
+- **Pagination**:
+  - Use `after` and `before` parameters to navigate through results.
+
+---
+
+## Additional Considerations
+
+- Be mindful of [Reddit's API rate limits](https://www.reddit.com/dev/api/).
+- All links and buttons in the design are static unless specifically mentioned.
+
+---
+
+## Front-End of the Reddit-clone
+
+![Screenshot 2025-01-08 220641](https://github.com/user-attachments/assets/88715e20-ea79-493e-b201-c54a2e63c75b)
+
+![Screenshot 2025-01-08 220655](https://github.com/user-attachments/assets/5f9d31f1-d02d-42e4-8047-d638304fa4e8)
+
+![Screenshot 2025-01-08 220612](https://github.com/user-attachments/assets/830b719a-372b-4036-93d6-67ae98ba83a3)
+
+![Screenshot 2025-01-08 220626](https://github.com/user-attachments/assets/14636b4d-1822-4e18-b481-1852767cc95d)
+
+
+
