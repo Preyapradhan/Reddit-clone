@@ -12,6 +12,7 @@ A static page implementation of a Reddit-inspired platform, designed to closely 
 - [API Integration](#api-integration)
 - [Additional Considerations](#additional-considerations)
 - [Front-End of the Reddit-clone](#front-end-of-the-reddit-clone)
+- [Available Scripts](#available-scripts)
 
 ---
 
@@ -118,5 +119,14 @@ While most sections are static, the **Popular** section fetches real-time data f
 
 ![Screenshot 2025-01-08 220626](https://github.com/user-attachments/assets/14636b4d-1822-4e18-b481-1852767cc95d)
 
+---
+
+## Available Scripts
+
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner.
+- `npm run build`: Builds the app for production.
+
+---
 
 
